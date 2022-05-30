@@ -3,12 +3,10 @@ import Layout from "../Layout";
 import App from "./App";
 
 describe("game list app", () => {
-  it("should render a footer and a navbar", () => {
+  it("should render the layout", () => {
     const { getByRole } = render(<App />);
-    const navbar = getByRole("navigation");
-    const footer = getByRole("footer");
+    const layout = getByRole("layout");
 
-    expect(navbar).toBeDefined();
-    expect(footer).toBeInstanceOf(Layout);
+    expect(layout).toBeDefined();
   });
 });
