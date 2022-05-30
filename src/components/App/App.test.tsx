@@ -1,5 +1,4 @@
-import { render, screen } from "@testing-library/react";
-import Layout from "../Layout";
+import { render } from "@testing-library/react";
 import App from "./App";
 
 describe("game list app", () => {
