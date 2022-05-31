@@ -3,12 +3,12 @@ import { GameDTO } from "../../constants/dto/games.dto";
 import GameItem from "./GameItem";
 
 function GameList() {
-  const [games, setGames] = useState<GameDTO[]>([]);
+  const [games] = useState<GameDTO[]>([]);
   return (
     <div>
       GameList
       {games.map((item) => (
-        <GameItem key={item.GameID} />
+        <GameItem imageUrl={item.ImageUrlGame} name={item.GameName} key={item.GameID} />
       ))}
     </div>
   );

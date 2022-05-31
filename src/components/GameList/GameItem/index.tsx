@@ -3,7 +3,7 @@ interface GameItemProps{
   imageUrl: string;
 }
 
-function GameItem({} : GameItemProps) {
+function GameItem({name, imageUrl} : GameItemProps) {
   return <div>GameItem</div>;
 }
 
