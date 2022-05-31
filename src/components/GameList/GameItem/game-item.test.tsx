@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import GameItem from "./";
 
 describe("Game list", () => {
-  it("should call the function which request games info 1 time", () => {
+  it("should render the component with an image with the correct attributes and a title in a h3 tag", () => {
     const mockedProps = {
       name: "hola",
       imageUrl: "blabla",
