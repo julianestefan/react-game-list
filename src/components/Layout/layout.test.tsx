@@ -5,7 +5,7 @@ describe("layout", () => {
   it("should render the  footer, the navbar and the content inside a main tag", () => {
     const content = <h1>Hola</h1>;
     
-    const{getByRole} =render(
+    const{getByRole, getByText} =render(
       <Layout>
         {content}
       </Layout>
@@ -16,7 +16,7 @@ describe("layout", () => {
     const footer = getByRole("footer");
 
     expect(main).toBeDefined();
-    expect(main.firstElementChild).toBe(content);
+    expect(main?.firstElementChild?.tagName).toBe('H1');
     expect(navbar).toBeDefined();
     expect(footer).toBeDefined();
 

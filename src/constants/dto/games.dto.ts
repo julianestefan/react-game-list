@@ -1,16 +1,38 @@
 import { CategoryName } from "../enum/category-name.enum";
 import { DeviceTypeName } from "../enum/device-type-name.enum";
 
+export interface GetGamesDTO {
+  BrandID: number;
+  CasinoSuspended: boolean;
+  CategoryGames: GameCategoryDTO[];
+  CustomerAlias: string;
+  CustomerID?: number;
+  DeviceTypeID: number;
+  Email?: string;
+  ExtGameID: number;
+  FavoritesGames?: GameDTO[];
+  GameID: number;
+  IsError: boolean;
+  IsValidModel: boolean;
+  ModelErrorMessage?: string;
+  Password?: string;
+  RedirectTo?: string;
+  TokenJwt?: string;
+  TokensJwt: string[];
+}
+
 export interface GameCategoryDTO {
   CategoryID: number;
+  CategoryName: string;
   DisplayOrder: number;
+  Featured: GameDTO[];
+  Games: GameDTO[]
+  ImageUrl: string;
   IsActive: boolean;
   ParentID: number;
-  ImageUrl: string;
   IsMainCategory: boolean;
   ParentCategoryName: CategoryName;
   SubCategories?: null;
-  Featured: GameDTO[];
   MostPlayed: GameDTO[];
   NewGames: GameDTO[];
   Popular: GameDTO[];
