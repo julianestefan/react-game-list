@@ -10,5 +10,4 @@ describe("Footer", () => {
     expect(button).toBeDefined();
   });
 
-
 });

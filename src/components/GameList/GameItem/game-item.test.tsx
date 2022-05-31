@@ -5,7 +5,7 @@ describe("Game list", () => {
   it("should render the component with an image with the correct attributes and a title in a h3 tag", () => {
     const mockedProps = {
       name: "hola",
-      imageUrl: "blabla",
+      imageurl: "blabla",
     };
     const { getByRole, getByText } = render(<GameItem {...mockedProps} />);
 
@@ -13,12 +13,11 @@ describe("Game list", () => {
     const name = getByText(mockedProps.name);
 
     expect(img).toBeDefined();
-    expect(img).toHaveAttribute('src', mockedProps.imageUrl);
-    expect(img).toHaveAttribute('alt', mockedProps.name);
+    const srcUrl = process.env.REACT_APP_BASE_IMAGE_URL + mockedProps.imageurl;
+    expect(img).toHaveAttribute("src", srcUrl);
+    expect(img).toHaveAttribute("alt", mockedProps.name);
 
     expect(name).toBeDefined();
-    expect(name.tagName).toBe('h3')
-   
-
+    expect(name.tagName).toBe("H6");
   });
 });
