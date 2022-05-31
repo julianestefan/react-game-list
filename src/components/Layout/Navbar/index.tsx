@@ -8,7 +8,7 @@ function Navbar() {
     <Grid className={styles.header} container>
       <header >
         <nav>
-          <a href="#">
+          <a href="/">
             <img src={logo} alt="logo" />
           </a>
         </nav>
