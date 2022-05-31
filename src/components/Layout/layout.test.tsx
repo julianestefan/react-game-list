@@ -13,7 +13,7 @@ describe("layout", () => {
 
     const main = getByRole("main");
     const navbar = getByRole("navigation");
-    const footer = getByRole("footer");
+    const footer = getByRole("contentinfo");
 
     expect(main).toBeDefined();
     expect(main?.firstElementChild?.tagName).toBe('H1');
