@@ -1,46 +1,20 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project was developed using create react app tool using the typescript template. I also use some dependencies like material ui for styling and xios to make network requests.
+The main development flow was based in test driven development writing the every test before start codeing.
+I wrote 2 core components the layout and the GameList
 
-## Available Scripts
+- Layout is responsible for displaying elements on the screen. It has 2 components navbar and footer with the sticky behavior. It also recieves the main content in the children prop which allows to scale application in the future. For example if you want to include routing you only have to pass router as children to this component.
+- The game list makes the network request and renders the list of Games. I use material ui grid compoennts to make the list responsive. I also use some typescript features (geenrics) to indicate axios the type of response it will recieve from the request and improving development experience. In the constants folder there is some interfaces and enum for declaring the DTOs 
 
-In the project directory, you can run:
+# Deployment
 
-### `npm start`
+You can access a deployed version [here](https://react-game-list.vercel.app/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The build command in vercel is overrided to avoid deploying invalid code.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm run test && react-script build
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
