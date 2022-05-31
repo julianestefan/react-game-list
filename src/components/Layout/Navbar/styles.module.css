@@ -1,4 +1,5 @@
 .header {
     background-color: #2d2e2c;
     padding: 1rem;
+    position: sticky;
 }
