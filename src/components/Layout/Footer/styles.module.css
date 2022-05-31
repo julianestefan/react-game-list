@@ -11,10 +11,10 @@ footer {
 }
 
 .actionButton {
-    position: absolute;
+    position: absolute!important;
     bottom: 0;
-    border-radius: 100%;
+    border-radius: 100%!important;
     height: 4rem;
     width: 2.25rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.2rem!important;
 }
